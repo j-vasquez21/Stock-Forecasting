@@ -22,6 +22,10 @@ The approaches I took towards building a predictive model were to use build thre
 
 ## Results 
 
+#### Baseline Model
+![NASDX](images/baseline.jpg)
+RMSE: 
+
 ## Conclusion
 
 ## For More Information
