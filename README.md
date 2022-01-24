@@ -15,9 +15,10 @@ The limitation to the free account, is that you will only be allowed historical 
 
 The tiingo API will return data regarding the date, open, close, high, low and volume for the specified index fund ticker. For this project, I collected the 5 year historical data from 13 different index funds and ETFs. The funds in question are [NASDX](https://www.tiingo.com/nasdx/overview), [IVV](https://www.tiingo.com/ivv/overview), [VFIAX](https://www.tiingo.com/vfiax/overview), [QQQ](https://www.tiingo.com/qqq/overview), [SWPPX](https://www.tiingo.com/swppx/overview), [SWTSX](https://www.tiingo.com/swtsx/overview), [FXAIX](https://www.tiingo.com/swtsx/overview), [DIA](https://www.tiingo.com/dia/overview), [VUG](https://www.tiingo.com/vug/overview), [SPY](https://www.tiingo.com/spy/overview), [VOO](https://www.tiingo.com/voo/overview), and [VTWO](https://www.tiingo.com/vtwo/overview). 
 
-The data folder in this repository provides notebooks of the data collection from the API and the combining of information of all funds into one DataFrame which I then save into a csv file.
+The data folder in this repository provides notebooks of the data collection from the API and the combining of information of all funds into one DataFrame, which I then save into a CSV file.
 
-## Methods
+## Methodology
+The approaches I took towards building a predictive model were to use build three types of models. They are an ARIMA model, FBprophet model, and a LSTM (Long Short Term Memory) model which is a special type of RNN (Recurrent Neural Network). The goal was to make a reliable predicive model, thus the best performing model will be the one with the lowest RMSE. After finding the best performing model, I used the model to come up with the next 60 day closing prices of each fund and calculate the ROIs for that 60 day period. Based on the ROIs, I will be able to give my recommendations.
 
 ## Results 
 
@@ -28,8 +29,8 @@ The data folder in this repository provides notebooks of the data collection fro
 ## Repository Structure
 ```
 ├── README.md                           <- 
-├── main_notebook.ipynb                 <- 
-├── project_presentation.pdf            <- 
+├── EDA.ipynb                           <- 
+├── Modeling                            <- 
 ├── data                                <- 
 └── images                              <- 
 ```
