@@ -5,8 +5,16 @@
 ## Overview
 Index Funds and ETFs are among the most common investment products being purchased today. Rather than purchasing shares from individual companies one at a time, these funds allow an investor to hold a "basket" of stocks from various companies with a single purchase. This way of investing offers the benefits of having lower cost, lower risk through diversification, and higher returns. In this project, we will use Time Series Analysis and Modeling to forecast closing prices of popular index funds and ETFs to make recommendations on which funds to invest in. With there being many index funds and ETFs out in the market, we will focus on some of the more popular one out there, according to [bankrate](https://www.bankrate.com/investing/best-index-funds/).
 
+Order of Notebooks:
+
+1. EDA
+2. Modeling
+3. Evaluation
+
+Running the notebooks on [google colab](https://colab.research.google.com/?utm_source=scs-index) is recommended as that is the environment used to construct the notebooks.
+
 ## Business Objective
-For this project, we will operate as a financial advising firm. The main goal is to be able to offer our clients, investors, an easy way to decide on which funds to invest in. In order to do this, we will need to create a predictive model that will be able to make accurate close price predictions for the next coming days. To be able to distinguish which funds are the "best", we will predict the closing prices for each fund and calculate their ROIs for the next 60 days. Based on the ROIs we will be able to make our recommendations to our clients.
+For this project, we will operate as a financial advising firm. The main goal is to be able to offer our clients, investors, an easy way to decide on which funds to invest in. In order to do this, we will need to create a predictive model that will be able to make accurate close price predictions for the next year. To be able to distinguish which funds are the "best", we will predict the closing prices for each fund and calculate their ROIs for the next 365 days. Based on the ROIs we will be able to make our recommendations to our clients.
 
 ## Data
 The data used was collected through the [tiingo API](https://api.tiingo.com/documentation/general/overview). In order to start using the API, you must create a free account if you do not have one already. Upon signing up, your API access token will be available in the general section of the API documentation. 
@@ -18,13 +26,10 @@ The tiingo API will return data regarding the date, open, close, high, low and v
 The data folder in this repository provides notebooks of the data collection from the API and the combining of information of all funds into one DataFrame, which I then save into a CSV file.
 
 ## Methodology
-The approaches I took towards building a predictive model were to use build three types of models. They are an ARIMA model, FBprophet model, and a LSTM (Long Short Term Memory) model which is a special type of RNN (Recurrent Neural Network). The goal was to make a reliable predicive model, thus the best performing model will be the one with the lowest RMSE. After finding the best performing model, I used the model to come up with the next 60 day closing prices of each fund and calculate the ROIs for that 60 day period. Based on the ROIs, I will be able to give my recommendations.
+The approaches I took towards building a predictive model were to build three types of models. They are an ARIMA model, FBprophet model, and a LSTM (Long Short Term Memory) model which is a special type of RNN (Recurrent Neural Network). The goal was to make a reliable predicive model, thus the best performing model will be the one with the lowest RMSE. After finding the best performing model, I used the model to come up with the closing prices for the next 365 days and calculate the ROIs for that time period. Based on the ROIs, I will be able to give my recommendations on which funds are worth investing in.
 
 ## Results 
 
-#### Baseline Model
-![NASDX](images/baseline.jpg)
-RMSE: 
 
 ## Conclusion
 
@@ -32,9 +37,9 @@ RMSE:
 
 ## Repository Structure
 ```
-├── README.md                           <- 
-├── EDA.ipynb                           <- 
-├── Modeling                            <- 
-├── data                                <- 
-└── images                              <- 
+├── README.md                           <- Provides An Overview Of The Repository
+├── data                                <- Contains The Notebook Used For Data Collection and The CSV File
+├── EDA.ipynb                           <- Inital EDA Of The Data
+├── Modeling                            <- Folder Containing The Modeling Notebooks For Each Fund
+└── Evaluation.ipynb                    <- Final Evaluation and Recommendations 
 ```
