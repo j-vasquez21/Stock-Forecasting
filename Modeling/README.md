@@ -1,0 +1,5 @@
+# Modeling Folder
+
+This folder contains the modeling notebooks for each of the 13 funds. Each notebook goes through the same modeling process for each fund. This includes creating a naive baseline model, ARIMA model, LSTM model, and a FBprophet model. For each model, we calculated the RMSE to measure the predictive performance and judge which model is the best for predicting the closing price of a fund. After finding the best model, we use it to find the next closing prices for the next 365 days. Using these predicted closing prices, we then calculate the ROI during that period of time to give us a measure of how well the fund will perform in the future.
+
+This folder will also contain two csv files that will be used in the Evaluation notebook to summarize the results from all 13 notebooks and draw our conclusions.
