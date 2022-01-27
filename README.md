@@ -29,14 +29,18 @@ The data folder in this repository provides the notebook of the data collection 
 The approaches I took towards building a predictive model were to build three types of models. They are an ARIMA model, FBprophet model, and a LSTM (Long Short Term Memory) model which is a special type of RNN (Recurrent Neural Network). The goal was to make a reliable predicive model, thus the best performing model will be the one with the lowest RMSE. After finding the best performing model, I used the model to come up with the closing prices for the next 365 days and calculate the ROIs for that time frame. Based on the ROIs, I will be able to give my recommendations on which funds are worth investing in.
 
 ## Results 
+After modeling each fund's closing price using each model, I calculated the RMSEs for each model to evaluate their performance. Since we have 13 different funds with each fund being modeled using the baseline, ARIMA, LSTM, and FBprophet, I calculated the average rmse that each model scored among all funds. This was done to get an general overview of how each model performed when predicting the closing prices. Here I provide the bar chart of these results:
 
 ![avg_rmses](./images/avg_model_rmse.jpg)
 
+The LSTM model was the best model for making accurate predictions as the average RMSE was the lowest among the other two models. After confirming the best model, I started to make the next 365 day close price predictions for each fund. Using those predictions, I calculated each funds projected one year ROIs.
+
+![projected_rois](./images/final_rois.jpg)
 
 
 ## Conclusion
+The projected ROIs suggest that the funds with tickers VTWO, SWTSX, and SPY are the recommended fund to invest, however the projected ROIs appear to be suspiciously large. Rather than being quick to recommend these funds to investors, I would like to take precaution and investigate further on the matter. The next steps to continue this investigation would be to obtain more data that extends past the 5 year historical data gathered from tiingo, consult with others with domain knowledge, and try tuning the LSTM model.
 
-## For More Information
 
 ## Repository Structure
 ```
