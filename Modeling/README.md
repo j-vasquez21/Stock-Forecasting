@@ -1,3 +1,3 @@
-# Modeling README
+# Modeling 
 
-This folder will contain all of the funds and their modeling process.
+This folder will contain all of the funds and their modeling process. The modeling process for each fund is the same. We begin with creating a baseline for the time series. The baseline will be a naive baseline which is a shifted version of the original time series. The we move on to constructing an ARIMA model, LSTM model, and FBprophet. As each model is created it is tested and the RMSE is calculated. 
