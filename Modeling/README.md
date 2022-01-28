@@ -20,8 +20,8 @@ and lastly a FBprophet:
 
 ![fbprophet](../images/fbprophet.jpg)
 
-After testing each model, we take determine which model performed the best by compare the RMSEs of each model:
+After testing each model, we determine which model performed the best by comparing the RMSEs of each model:
 
 ![rmses](../images/rmses.jpg)
 
-Lastly, we choose the optimal model to make predictions of the closing price of the fund for the rest of the year and calculate the projected ROI. I saved the results for all the funds into the two CSV files found in this folder. These files will be used in the Evaluation.ipynb notebook to draw our final recommendations.  
+Lastly, we choose the most optimal model, the one with the lowest RMSE, to make predictions of the closing prices for the rest of the year and calculate the projected ROI. I saved the results for all the funds into the two CSV files found in this folder. These files will be used in the Evaluation.ipynb notebook to draw our final recommendations.  
