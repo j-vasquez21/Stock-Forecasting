@@ -1,6 +1,6 @@
 # Modeling 
 
-This folder will contain all of the modeling processes and results for each of the 13 funds. Each of the funds underwent the same steps towards find the best predictive model to predict the closing price of that fund. 
+This folder will contain all of the modeling processes and results for each of the 13 funds. Each of the funds underwent the same steps towards finding the best predictive model to predict future closing prices of that fund. 
 
 We begin by creating a naive baseline which was a shifted version of the original.
 
