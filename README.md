@@ -14,7 +14,7 @@ Order of Notebooks:
 Running the modeling notebooks on [google colab](https://colab.research.google.com/?utm_source=scs-index) is recommended as that is the environment used to construct the notebooks. I also leave the proper adjustments to be made if you choose to follow along on jupyter notebook.
 
 ## Business Objective
-For this project, we will operate as a financial advising firm. The main goal is to be able to offer our clients, investors, an easy way to decide on which funds to invest in. In order to do this, we will need to create a predictive model that will be able to make accurate close price predictions for the next year. To be able to distinguish which funds are the "best", we will predict the closing prices for each fund and calculate their ROIs for the next 365 days. Based on the ROIs we will be able to make our recommendations to our clients.
+For this project, we will operate as a financial advising firm. The main goal is to be able to offer our clients, investors, an easy way to decide on which funds to invest in. In order to do this, we will need to create a predictive model that will be able to make accurate close price predictions for the next year. To be able to distinguish which funds are the "best", we will predict the closing prices for each fund and calculate their ROIs for the next 365 days. Based on the ROIs, we will be able to make our recommendations to our clients.
 
 ## Data
 The data used was collected through the [tiingo API](https://api.tiingo.com/documentation/general/overview). In order to start using the API, you must create a free account if you do not have one already. Upon signing up, your API access token will be available in the general section of the API documentation. 
